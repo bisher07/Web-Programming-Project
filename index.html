@@ -50,6 +50,28 @@
   </header>
 
   <main>
+    <!--  HERO (background video) -->
+    <section class="hero container">
+      <!-- Layer 1: the video + a dark overlay on top of it -->
+      <div class="hero__media">
+        <video class="hero__video" autoplay muted loop playsinline poster="assets/images/home/hero-petra-poster.jpg">
+          <source src="assets/videos/hero-petra.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <!-- Layer 2: the text, placed on top of the video -->
+      <div class="hero__content">
+        <p class="hero__tag">An interactive journey through human history</p>
+        <h1 class="hero__title">Every era<br>has a <em>story.</em></h1>
+        <p class="hero__text">Explore the civilizations, discoveries, and extraordinary moments that shaped humanity.
+        </p>
+        <div class="hero__buttons">
+          <a class="btn" href="timeline.html">Explore History</a>
+          <a class="btn btn--light" href="about.html">Discover Our Story</a>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 
