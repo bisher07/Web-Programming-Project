@@ -1,0 +1,171 @@
+/* COLOURS & FONTS (CSS variables) */
+:root {
+  --bg: #11110f;
+  /* main background */
+  --bg-2: #191815;
+  /* slightly lighter background */
+  --gold: #b69a62;
+  /* antique gold accent */
+  --parchment: #e8ddc7;
+  /* headings */
+  --muted: #8d8980;
+  /* small grey text */
+  --ivory: #f5f0e7;
+  /* normal text */
+  --line: rgba(232, 221, 199, 0.12);
+  /* faint border lines */
+  --line-gold: rgba(182, 154, 98, 0.35);
+  /* faint gold lines */
+
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ivory);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Centred column used by every section */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 11px 22px;
+  background: var(--gold);
+  color: var(--bg);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  transition: background 0.4s, border-color 0.4s;
+}
+
+.btn:hover {
+  background: var(--ivory);
+  border-color: var(--ivory);
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(17, 17, 15, 0.92);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--gold);
+  border: 1px solid var(--line-gold);
+  border-radius: 50%;
+  transition: transform 0.8s;
+}
+
+.logo:hover .logo__icon {
+  transform: rotate(180deg);
+}
+
+.logo__text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  color: var(--parchment);
+}
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 6px 6px 18px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 2px;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  padding: 8px 10px;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 231, 0.7);
+  transition: color 0.3s;
+}
+
+/* Gold underline, hidden until hover (or on the current page) */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 2px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+
+.nav__link:hover,
+.nav__link.active {
+  color: var(--ivory);
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
+  transform: scaleX(1);
+}
