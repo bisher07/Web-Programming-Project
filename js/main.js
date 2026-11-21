@@ -1,0 +1,54 @@
+/* CIVILIZATIONS SLIDER */
+const slider = document.getElementById("slider");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const sliderSection = document.getElementById("civilizations");
+
+// How far one click moves: one card (300px) + the gap (24px)
+const step = 324;
+
+// Next button: glide the row to the right
+nextBtn.addEventListener("click", function () {
+  slider.scrollBy({ left: step, behavior: "smooth" });
+});
+
+// Previous button: glide the row to the left
+prevBtn.addEventListener("click", function () {
+  slider.scrollBy({ left: -step, behavior: "smooth" });
+});
+
+/* Automatic slow sliding */
+let direction = 1;     // 1 = move right, -1 = move left
+let paused = false;    // true while the mouse is over the section
+
+function autoSlide() {
+  if (paused) {
+    return; // do nothing while paused
+  }
+
+  // Move the row 1 pixel
+  slider.scrollLeft = slider.scrollLeft + direction;
+
+  // The furthest the row can scroll
+  const end = slider.scrollWidth - slider.clientWidth;
+
+  // At the end, turn around. At the start, go forward again
+  if (slider.scrollLeft >= end - 1) {
+    direction = -1;
+  }
+  if (slider.scrollLeft <= 0) {
+    direction = 1;
+  }
+}
+
+// Run autoSlide every 30 milliseconds (about 33 pixels per second)
+setInterval(autoSlide, 30);
+
+// Pause while the mouse is over the slider, so people can read and click
+sliderSection.addEventListener("mouseenter", function () {
+  paused = true;
+});
+
+sliderSection.addEventListener("mouseleave", function () {
+  paused = false;
+});

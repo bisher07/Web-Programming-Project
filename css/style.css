@@ -368,3 +368,91 @@ p {
   width: 34%;
   height: 40%;
 }
+
+/* CIVILIZATIONS SLIDER */
+.slider-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.slider-head h2 {
+  margin-bottom: 0;
+}
+
+.slider-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Round arrow buttons */
+.slider-btn {
+  width: 52px;
+  height: 52px;
+  background: transparent;
+  color: var(--gold);
+  font-size: 1.2rem;
+  border: 1px solid var(--line-gold);
+  border-radius: 50%;
+  cursor: pointer;
+  /* Shows the hand cursor on hover. Links get it automatically and buttons don’t */
+  transition: background 0.3s, color 0.3s;
+}
+
+.slider-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+/* The row of cards */
+.slider {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-gold) transparent;
+}
+
+/* One card */
+.slide {
+  flex: 0 0 300px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  transition: border-color 0.4s;
+}
+
+.slide:hover {
+  border-color: var(--line-gold);
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.slide__body {
+  padding: 22px 24px 26px;
+}
+
+.slide__date {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.slide h3 {
+  font-size: 1.9rem;
+  margin: 6px 0 4px;
+}
+
+.slide p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
