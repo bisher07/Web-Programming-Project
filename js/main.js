@@ -73,3 +73,15 @@ toTop.addEventListener("click", function () {
 /* FOOTER YEAR */
 // Write the current year into <span id="year">
 document.getElementById("year").textContent = new Date().getFullYear();
+/* MOBILE MENU */
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
+
+// Click the hamburger: open the menu, or close it if it's already open
+menuBtn.addEventListener("click", function () {
+  nav.classList.toggle("open");
+  menuBtn.classList.toggle("open");
+
+  // Tell screen readers whether the menu is open (true or false)
+  menuBtn.setAttribute("aria-expanded", nav.classList.contains("open"));
+});

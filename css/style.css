@@ -607,3 +607,118 @@ p {
   background: var(--gold);
   color: var(--bg);
 }
+
+/* HAMBURGER BUTTON (hidden on big screens) */
+.menu-btn {
+  display: none;
+  width: 46px;
+  height: 46px;
+  padding: 14px 12px;
+  background: transparent;
+  border: 1px solid var(--line-gold);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* The three lines */
+.menu-btn span {
+  display: block;
+  height: 1px;
+  margin: 5px 0;
+  background: var(--parchment);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* When the menu is open, the three lines become an X */
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* SMALL SCREENS (1100px wide or less) */
+@media (max-width: 1100px) {
+
+  /* Show the hamburger button */
+  .menu-btn {
+    display: block;
+  }
+
+  /* The nav becomes a hidden drop-down box under the header */
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 32px;
+    right: 32px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  /* JS adds .open when the hamburger is clicked */
+  .nav.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Links one under the other */
+  .nav__list {
+    flex-direction: column;
+  }
+
+  /* Less space between sections */
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  /* Hero text a bit closer to the edges */
+  .hero__content {
+    left: 48px;
+    right: 48px;
+    bottom: 40px;
+  }
+
+  /* Hero buttons may go onto two lines */
+  .hero__buttons {
+    flex-wrap: wrap;
+  }
+
+  /* Intro: one column (text on top, photos below) */
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  /* Photos: never wider than 520px, centred */
+  .tile-gallery {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Slider: arrows go under the heading */
+  .slider-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Quote box: less padding */
+  .quote-panel {
+    padding: 50px 24px;
+  }
+
+  /* Footer: one column */
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
