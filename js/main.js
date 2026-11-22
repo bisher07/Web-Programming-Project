@@ -52,3 +52,24 @@ sliderSection.addEventListener("mouseenter", function () {
 sliderSection.addEventListener("mouseleave", function () {
   paused = false;
 });
+
+/* BACK-TO-TOP BUTTON */
+const toTop = document.getElementById("toTop");
+
+// Every time the page scrolls, check how far down we are
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 600) {
+    toTop.classList.add("show");     // show the button
+  } else {
+    toTop.classList.remove("show");  // hide it again near the top
+  }
+});
+
+// Click: glide back to the top of the page
+toTop.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+/* FOOTER YEAR */
+// Write the current year into <span id="year">
+document.getElementById("year").textContent = new Date().getFullYear();

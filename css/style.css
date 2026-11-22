@@ -474,12 +474,12 @@ p {
   inset: 10px;
   border: 1px solid var(--line);
   pointer-events: none;
+  /*Without this line, clicking “About CHRONOS” would hit the invisible frame, not the button, and the button wouldn’t work */
 }
 
 /* Centre the eyebrow (it is a flex row) */
 .quote-panel .eyebrow {
   justify-content: center;
-  /*Without this line, clicking “About CHRONOS” would hit the invisible frame, not the button, and the button wouldn’t work */
 }
 
 /* The quote itself: big italic serif text */
@@ -501,4 +501,109 @@ p {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold);
+}
+
+/* FOOTER */
+.footer {
+  padding-top: 90px;
+  border-top: 1px solid var(--line);
+  overflow: hidden;
+}
+
+/* Three columns: the first one is twice as wide */
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer__about {
+  max-width: 320px;
+  margin-top: 20px;
+  color: var(--muted);
+}
+
+/* Column titles */
+.footer h4 {
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.footer li {
+  margin-bottom: 10px;
+}
+
+.footer li a {
+  color: rgba(245, 240, 231, 0.8);
+  transition: color 0.3s, padding-left 0.3s;
+}
+
+/* On hover the link turns gold and moves a little to the right */
+.footer li a:hover {
+  color: var(--gold);
+  padding-left: 6px;
+}
+
+/* Big CHRONOS word: only the outline of the letters is drawn */
+.footer__word {
+  margin: 60px 0 0;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(4.5rem, 18vw, 17rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--line-gold);
+}
+
+/* Copyright line */
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.footer__bottom p {
+  margin-bottom: 0;
+}
+
+/* BACK-TO-TOP BUTTON */
+/* Fixed in the bottom-right corner of the screen */
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90;
+  width: 50px;
+  height: 50px;
+  background: var(--bg-2);
+  color: var(--gold);
+  font-size: 1.2rem;
+  border: 1px solid var(--line-gold);
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background 0.3s, color 0.3s;
+}
+
+/* JavaScript adds the class "show" after you scroll down */
+.to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.to-top:hover {
+  background: var(--gold);
+  color: var(--bg);
 }
