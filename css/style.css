@@ -643,6 +643,85 @@ p {
 }
 
 
+/* PAGE TITLE (top of every page except home) */
+.page-hero {
+  padding-top: 100px;
+}
+
+.page-hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.page-hero h1 em {
+  color: var(--gold);
+}
+
+.page-hero p {
+  max-width: 560px;
+  color: var(--muted);
+}
+
+/* TABLE */
+/* The wrapper scrolls sideways if the table is too wide (phones) */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 640px;           /* never squash smaller than this; scroll instead */
+  border-collapse: collapse;  /* one shared line between cells, not double lines */
+}
+
+/* The title above the table */
+.table caption {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Column titles */
+.table th {
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--line-gold);
+}
+
+/* Normal cells */
+.table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* First column (the year): big serif gold text */
+.table td:first-child {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+/* Zebra stripes: every even row gets a slightly lighter background */
+.table tbody tr:nth-child(even) {
+  background: var(--bg-2);
+}
+
+/* Highlight the row under the mouse */
+.table tbody tr:hover {
+  background: rgba(182, 154, 98, 0.08);
+}
+
+
 /* SMALL SCREENS (1100px wide or less) */
 @media (max-width: 1100px) {
 
