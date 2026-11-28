@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civilizations — CHRONOS</title>
+
+  <!-- Fonts: Cormorant Garamond (headings) + DM Sans (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--  HEADER  -->
+  <header class="header">
+    <div class="container header__inner">
+      <!-- Logo  -->
+      <a class="logo" href="index.html">
+        <span class="logo__icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" aria-hidden="true">
+            <path d="M6 3h12M6 21h12M7 3c0 5 10 6 10 18M17 3c0 5-10 6-10 18" />
+          </svg>
+        </span>
+        <span class="logo__text">CHRONOS</span>
+      </a>
+
+      <!-- Navigation bar -->
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="timeline.html">Timeline</a></li>
+          <li><a class="nav__link active" href="civilizations.html">Civilizations</a></li>
+          <li><a class="nav__link" href="figures.html">Figures</a></li>
+          <li><a class="nav__link" href="discoveries.html">Discoveries</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+        </ul>
+        <a class="btn" href="timeline.html">Start Exploring</a>
+      </nav>
+
+      <!-- Hamburger button (only shown on small screens) -->
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE TITLE -->
+    <section class="page-hero container">
+      <p class="eyebrow">Civilizations</p>
+      <h1>Six civilizations <em>side by side</em></h1>
+      <p>Where they lived, how long they lasted, how they wrote, and what they left behind.</p>
+    </section>
+
+    <!-- CARDS (same card style as the home page slider) -->
+    <section class="section container">
+      <div class="card-grid">
+        <article class="slide">
+          <img src="assets/images/civilizations/mesopotamia.jpg" alt="Ruins of an ancient Mesopotamian city">
+          <div class="slide__body">
+            <span class="slide__date">c. 3500 – 539 BC</span>
+            <h3>Mesopotamia</h3>
+            <p>The land between the Tigris and Euphrates rivers, where the first cities, the wheel and writing appeared.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="assets/images/civilizations/egypt.jpg" alt="The pyramids of Giza in Egypt">
+          <div class="slide__body">
+            <span class="slide__date">c. 3100 – 30 BC</span>
+            <h3>Egypt</h3>
+            <p>A kingdom built along the Nile, ruled by pharaohs for three thousand years and famous for its pyramids.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="assets/images/civilizations/maya.jpg" alt="A Maya stone pyramid in the jungle">
+          <div class="slide__body">
+            <span class="slide__date">c. 2000 BC – AD 1500</span>
+            <h3>Maya</h3>
+            <p>City-states in the rainforests of Central America, masters of astronomy and the calendar.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="assets/images/civilizations/china.jpg" alt="The Great Wall of China">
+          <div class="slide__body">
+            <span class="slide__date">c. 1600 BC – AD 220</span>
+            <h3>Ancient China</h3>
+            <p>Dynasties along the Yellow River that gave the world paper, silk and the Great Wall.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="assets/images/civilizations/greece.jpg" alt="The Parthenon in Athens">
+          <div class="slide__body">
+            <span class="slide__date">c. 800 – 146 BC</span>
+            <h3>Greece</h3>
+            <p>Independent city-states around the Aegean Sea, the birthplace of democracy, philosophy and theatre.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="assets/images/civilizations/rome.jpg" alt="The Colosseum in Rome">
+          <div class="slide__body">
+            <span class="slide__date">753 BC – AD 476</span>
+            <h3>Rome</h3>
+            <p>One city on the Tiber that grew into an empire around the whole Mediterranean Sea.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="container table-section">
+      <p class="eyebrow">Compare</p>
+      <h2>How they <em>compare</em></h2>
+
+      <div class="table-wrap">
+        <table class="table">
+          <caption>The six civilizations compared</caption>
+
+          <!-- Two header rows: "Time span" sits above "Began" and "Ended" -->
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Civilization</th>
+              <th scope="col" rowspan="2">Region</th>
+              <th scope="colgroup" colspan="2">Time span</th>
+              <th scope="col" rowspan="2">Writing</th>
+              <th scope="col" rowspan="2">Famous for</th>
+            </tr>
+            <tr>
+              <th scope="col">Began</th>
+              <th scope="col">Ended</th>
+            </tr>
+          </thead>
+
+          <!-- One row per civilization. The first cell is a row header (th) -->
+          <tbody>
+            <tr>
+              <th scope="row">Mesopotamia</th>
+              <td>Tigris &amp; Euphrates rivers</td>
+              <td>c. 3500 BC</td>
+              <td>539 BC</td>
+              <td>Cuneiform</td>
+              <td>The first cities, the wheel, written laws</td>
+            </tr>
+            <tr>
+              <th scope="row">Egypt</th>
+              <td>Nile valley</td>
+              <td>c. 3100 BC</td>
+              <td>30 BC</td>
+              <td>Hieroglyphs</td>
+              <td>Pyramids, mummies, the 365-day calendar</td>
+            </tr>
+            <tr>
+              <th scope="row">Maya</th>
+              <td>Central America</td>
+              <td>c. 2000 BC</td>
+              <td>AD 1500</td>
+              <td>Maya glyphs</td>
+              <td>Astronomy, the calendar, the number zero</td>
+            </tr>
+            <tr>
+              <th scope="row">Ancient China</th>
+              <td>Yellow River valley</td>
+              <td>c. 1600 BC</td>
+              <td>AD 220</td>
+              <td>Chinese characters</td>
+              <td>Paper, silk, the Great Wall</td>
+            </tr>
+            <tr>
+              <th scope="row">Greece</th>
+              <td>Aegean Sea</td>
+              <td>c. 800 BC</td>
+              <td>146 BC</td>
+              <td>Greek alphabet</td>
+              <td>Democracy, philosophy, the Olympic Games</td>
+            </tr>
+            <tr>
+              <th scope="row">Rome</th>
+              <td>Italy, then the Mediterranean</td>
+              <td>753 BC</td>
+              <td>AD 476</td>
+              <td>Latin alphabet</td>
+              <td>Roads, law, the Colosseum</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <!-- Top part -->
+    <div class="container footer__grid">
+      <!-- Logo + short description -->
+      <div>
+        <a class="logo" href="index.html">
+          <span class="logo__icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M6 3h12M6 21h12M7 3c0 5 10 6 10 18M17 3c0 5-10 6-10 18" />
+            </svg>
+          </span>
+          <span class="logo__text">CHRONOS</span>
+        </a>
+        <p class="footer__about">An interactive journey through the civilizations, discoveries and people that shaped
+          humanity.</p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="civilizations.html">Civilizations</a></li>
+          <li><a href="figures.html">Figures</a></li>
+        </ul>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="discoveries.html">Discoveries</a></li>
+          <li><a href="about.html">About &amp; Contact</a></li>
+          <li><a href="assets/CREDITS.md">Image Credits</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Big outlined word (decoration only) -->
+    <p class="footer__word" aria-hidden="true">CHRONOS</p>
+
+    <!-- Bottom line -->
+    <div class="container">
+      <div class="footer__bottom">
+        <p>&copy; <span id="year">2026</span> CHRONOS · Web Programming course project</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button (hidden until you scroll down) -->
+  <button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

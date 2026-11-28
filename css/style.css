@@ -671,8 +671,10 @@ p {
 
 .table {
   width: 100%;
-  min-width: 640px;           /* never squash smaller than this; scroll instead */
-  border-collapse: collapse;  /* one shared line between cells, not double lines */
+  min-width: 640px;
+  /* never squash smaller than this; scroll instead */
+  border-collapse: collapse;
+  /* one shared line between cells, not double lines */
 }
 
 /* The title above the table */
@@ -721,6 +723,40 @@ p {
   background: rgba(182, 154, 98, 0.08);
 }
 
+/* CARD GRID (civilizations page) */
+.card-grid {
+  display: grid;
+  /* As many columns as fit */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* Extra table rules for the comparison table */
+/* Header cells sit at the bottom of their space (for the rowspan cells) */
+.table thead th {
+  vertical-align: bottom;
+}
+
+/* Row headers (the civilization names) look like headings, not column titles */
+.table tbody th {
+  text-align: left;
+  padding: 16px 18px;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: none;
+  /* undo the uppercase from ".table th" */
+  letter-spacing: 0;
+  /* undo the wide spacing from ".table th" */
+  color: var(--parchment);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Space above the table section's footer */
+.table-section {
+  padding-bottom: 120px;
+}
 
 /* SMALL SCREENS (1100px wide or less) */
 @media (max-width: 1100px) {
